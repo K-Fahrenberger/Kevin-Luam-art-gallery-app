@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ArtpiecePreview from "../ArtPiecePreview/index.js";
+import ArtPiecePreview from "../ArtPiecePreview/index.js";
 
 const StyledList = styled.ul`
   list-style-type: none;
@@ -13,7 +13,7 @@ export default function ArtPieces({ pieces }) {
       <StyledList>
         {pieces.map((piece) => (
           <li key={piece.slug}>
-            <ArtpiecePreview
+            <ArtPiecePreview
               image={piece.imageSource}
               title={piece.name}
               artist={piece.artist}
