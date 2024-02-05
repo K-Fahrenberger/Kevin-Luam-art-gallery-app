@@ -1,10 +1,28 @@
-export default function ArtPiecePreview({ image, title, artist }) {
+import styled from "styled-components";
+import Image from "next/image";
+
+const Card = styled.figure`
+  display: flex;
+`;
+
+export default function ArtPiecePreview({
+  image,
+  title,
+  artist,
+  height,
+  width,
+}) {
   return (
-    <figure>
-      <img src={image} alt={title} />
+    <Card>
+      <Image
+        src={image}
+        alt={title}
+        height={height}
+        width={width}
+      />
       <figcaption>
         {title} - {artist}
       </figcaption>
-    </figure>
+    </Card>
   );
 }
