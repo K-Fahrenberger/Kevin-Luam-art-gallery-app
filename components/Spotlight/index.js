@@ -6,6 +6,7 @@ import {
   StyledImage,
   Caption,
 } from "../ArtPiecePreview/index.js";
+import FavoriteButton from "../FavoriteButton/index.js";
 
 const SpotlightContainer = styled.section`
   display: flex;
@@ -26,6 +27,7 @@ export default function Spotlight({ image, title, artist, width, height }) {
           />
         </ImageContainer>
         <Caption>
+        <FavoriteButton />
           {`"${title}"`} <br />
           {`Artist: ${artist}`}
         </Caption>
