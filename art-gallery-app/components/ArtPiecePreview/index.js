@@ -9,12 +9,13 @@ export const ImageContainer = styled.div`
 position: relative;
 display: flex;
 justify-content: center;
+margin-top: 50px;
 width: 100%
 height: 100%`;
 
 export const StyledImage = styled(Image)`
   max-width: 70vw;
-  margin-top: 80px;
+  margin-top: 50px;
   height: auto;
 `;
 
