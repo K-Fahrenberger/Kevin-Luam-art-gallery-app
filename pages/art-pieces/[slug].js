@@ -10,7 +10,7 @@ export default function ArtPieceDetailsPage({ pieces }) {
   // init relevant vars
   const index = pieces.findIndex((piece) => piece.slug === slug);
   const currentPiece = pieces[index];
-  const { image, title, artist, year, genre, width, height } = currentPiece;
+  const { image, width, height, title, artist, year, genre } = currentPiece;
 
   // error msg for invalid slug
   if (!currentPiece) {
@@ -25,12 +25,12 @@ export default function ArtPieceDetailsPage({ pieces }) {
     <>
       <ArtPieceDetails
         image={image}
+        width={width}
+        height={height}
         title={title}
         artist={artist}
         year={year}
         genre={genre}
-        width={width}
-        height={height}
       />
     </>
   );
