@@ -30,6 +30,7 @@ export default function ArtPieces({ pieces }) {
               artist={piece.artist}
               width={piece.dimensions.width}
               height={piece.dimensions.height}
+              
             />
           </StyledItems>
         ))}
