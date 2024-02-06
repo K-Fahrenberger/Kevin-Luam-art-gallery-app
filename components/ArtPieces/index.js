@@ -26,11 +26,11 @@ export default function ArtPieces({ pieces }) {
           <StyledItems key={piece.slug}>
             <ArtPiecePreview
               image={piece.imageSource}
-              title={piece.name}
-              artist={piece.artist}
               width={piece.dimensions.width}
               height={piece.dimensions.height}
-              
+              title={piece.name}
+              artist={piece.artist}
+              isFavorite={piece.isFavorite}
             />
           </StyledItems>
         ))}
