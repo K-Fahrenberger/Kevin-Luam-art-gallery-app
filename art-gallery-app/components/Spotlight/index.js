@@ -1,3 +1,35 @@
-export default function Spotlight() {
-  return <h1>Spotlight</h1>;
+import styled from "styled-components";
+import React, { useState, useEffect } from "react";
+import {
+  Card,
+  ImageContainer,
+  StyledImage,
+  Caption,
+} from "../ArtPiecePreview/index.js";
+
+const SpotlightContainer = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+export default function Spotlight({ image, title, artist, width, height }) {
+  return (
+    <SpotlightContainer>
+      <Card>
+        <ImageContainer>
+          <StyledImage
+            src={image}
+            alt={`Art piece by ${artist}`}
+            width={width}
+            height={height}
+          />
+        </ImageContainer>
+        <Caption>
+          {`"${title}"`} <br />
+          {`Artist: ${artist}`}
+        </Caption>
+      </Card>
+    </SpotlightContainer>
+  );
 }

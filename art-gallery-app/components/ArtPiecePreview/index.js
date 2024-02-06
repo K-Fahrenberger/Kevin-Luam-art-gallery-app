@@ -1,34 +1,63 @@
 import styled from "styled-components";
 import Image from "next/image";
 
-const Card = styled.figure`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+export const Card = styled.figure`
+  display: table;
 `;
 
-const StyledImage = styled(Image)`
-  max-width: 10%;
+export const ImageContainer = styled.div`
+position: relative;
+width: 100%
+height: 100%`;
+
+export const StyledImage = styled(Image)`
+  max-width: 70vw;
   height: auto;
 `;
 
-const Figcaption = styled.figcaption`
-  margin-top: 10px;
+export const Caption = styled.figcaption`
+  display: table-caption;
+  caption-side: bottom;
+  margin: 3px auto;
+  padding: 3px 5px;
+  background-color: lightgray;
+  color: black;
 `;
 
 export default function ArtPiecePreview({
   image,
   title,
   artist,
-  height,
   width,
+  height,
 }) {
   return (
     <Card>
-      <StyledImage src={image} alt={title} height={height} width={width} />
-      <figcaption>
-        {title} - {artist}
-      </figcaption>
+      <ImageContainer>
+        <StyledImage
+          src={image}
+          alt={`Art piece by ${artist}`}
+          width={width}
+          height={height}
+        />
+      </ImageContainer>
+      <Caption>
+        {`"${title}"`} <br />
+        {`Artist: ${artist}`}
+      </Caption>
     </Card>
   );
 }
+
+
+// export const Card = styled.figure`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// `;
+
+// export const Card = styled.figure`
+// position: relative;
+// width: 100%
+// height: 100%
+// `;
