@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Card, ImageContainer, StyledImage } from "../ArtPiecePreview/index.js";
-import {styles} from "art-gallery-app/styles"
+// import {styles} from "/styles"
 
 const DetailsContainer = styled.section`
   display: flex;
@@ -21,8 +21,8 @@ export default function ArtPieceDetails({
   artist,
   year,
   genre,
-  height,
   width,
+  height,
 }) {
   return (
     <DetailsContainer>
