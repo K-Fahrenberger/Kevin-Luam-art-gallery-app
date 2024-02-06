@@ -1,5 +1,4 @@
-// import { ReactComponent as HeartFilled } from "public/resources/assets/heart-filled.svg";
-// import { ReactComponent as HeartOutline } from "public/resources/assets/heart-outline.svg";
+import { useState } from "react";
 import Image from "next/image";
 import styled from "styled-components";
 
@@ -11,12 +10,19 @@ const StyledButton = styled.button`
   border: none;
   cursor: pointer;
 `;
-export default function FavoriteButton({ isFavorite, onToggleFavorite }) {
+
+export default function FavoriteButton() {
+  const [isFavorite, setIsFavorite] = useState(false);
+
+  const toggleFavorite = () => {
+    setIsFavorite(!isFavorite);
+  };
+
   return (
     <StyledButton
       className="favorite-button"
       aria-label="Save this art piece as favorite"
-      onClick={onToggleFavorite}
+      onClick={toggleFavorite}
     >
       {isFavorite ? (
         <Image
