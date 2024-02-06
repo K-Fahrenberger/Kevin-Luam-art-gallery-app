@@ -7,11 +7,14 @@ export const Card = styled.figure`
 
 export const ImageContainer = styled.div`
 position: relative;
+display: flex;
+justify-content: center;
 width: 100%
 height: 100%`;
 
 export const StyledImage = styled(Image)`
   max-width: 70vw;
+  margin-top: 80px;
   height: auto;
 `;
 
@@ -48,7 +51,6 @@ export default function ArtPiecePreview({
     </Card>
   );
 }
-
 
 // export const Card = styled.figure`
 //   display: flex;

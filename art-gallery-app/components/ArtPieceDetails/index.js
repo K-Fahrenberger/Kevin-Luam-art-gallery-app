@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Card, ImageContainer, StyledImage } from "../ArtPiecePreview/index.js";
+import {styles} from "art-gallery-app/styles"
 
 const DetailsContainer = styled.section`
   display: flex;
@@ -10,8 +11,6 @@ const DetailsContainer = styled.section`
 const DetailsCaption = styled.figcaption`
   display: table-caption;
   caption-side: bottom;
-  margin: 3px auto;
-  padding: 3px 5px;
   background-color: lightgray;
   color: black;
 `;
