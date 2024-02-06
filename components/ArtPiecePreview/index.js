@@ -50,6 +50,7 @@ export default function ArtPiecePreview({
           height={height}
         />
       </ImageContainer>
+      <FavoriteButton isFavorite={isFavorite} />
       <Caption>
         {`"${title}"`} <br />
         {`Artist: ${artist}`}
