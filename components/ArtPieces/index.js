@@ -6,7 +6,7 @@ const StyledList = styled.ul`
   flex-wrap: wrap;
   justify-content: center;
   list-style-type: none;
-  ${'' /* gap: 1rem; */}
+  gap: 1rem;
   padding: 0;
 `;
 
@@ -16,7 +16,6 @@ const StyledItems = styled.li`
   display: flex;
   align-items: center;
   justify-content: center;
-  
 `;
 
 export default function ArtPieces({ pieces }) {
