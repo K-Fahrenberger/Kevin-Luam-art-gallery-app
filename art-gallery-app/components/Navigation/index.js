@@ -8,7 +8,7 @@ const StyledNav = styled.nav`
   right: 0;
   background-color: #fff; /* Set your desired background color */
   padding: 10px;
-  z-index: 1000; /* Set a higher z-index to ensure it's above other elements */
+  z-index: 1; /* Set a higher z-index to ensure it's above other elements */
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
 `;
 
