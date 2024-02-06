@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Image from "next/image";
+import FavoriteButton from "../FavoriteButton/index.js";
 
 export const Card = styled.figure`
   display: table;
@@ -33,10 +34,11 @@ export const Caption = styled.figcaption`
 
 export default function ArtPiecePreview({
   image,
-  title,
-  artist,
   width,
   height,
+  title,
+  artist,
+  isFavorite,
 }) {
   return (
     <Card>
