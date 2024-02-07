@@ -18,7 +18,7 @@ export default function SpotlightPage({ pieces, onToggleFavorite, artPiecesInfo 
           height={randomPiece.dimensions.height}
           isFavorite={artPiecesInfo.find((piece) => piece.slug === randomPiece.slug)?.isFavorite}
           onToggleFavorite={(e) => {
-            e.preventDefault();
+            // e.preventDefault();
             onToggleFavorite(randomPiece.slug);
           }}
         />

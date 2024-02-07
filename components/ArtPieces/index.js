@@ -23,7 +23,7 @@ export default function ArtPieces({ pieces, artPiecesInfo, onToggleFavorite }) {
   return (
     <>
       <StyledList>
-        {pieces.map((piece) => (
+        {pieces?.map((piece) => (
           <StyledItems key={piece.slug}>
             <ArtPiecePreview
               slug={piece.slug}
@@ -33,7 +33,7 @@ export default function ArtPieces({ pieces, artPiecesInfo, onToggleFavorite }) {
               title={piece.name}
               artist={piece.artist}
               isFavorite={
-                artPiecesInfo.find((artPiece) => artPiece.slug === piece.slug)
+                artPiecesInfo?.find((artPiece) => artPiece.slug === piece.slug)
                   ?.isFavorite
               }
               onToggleFavorite={(e) => {
