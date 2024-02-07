@@ -44,6 +44,7 @@ export default function ArtPiecePreview({
   title,
   artist,
   isFavorite,
+  onToggleFavorite,
 }) {
   return (
     <Card>
@@ -61,7 +62,10 @@ export default function ArtPiecePreview({
         <Caption>
           {`"${title}"`} <br />
           {`Artist: ${artist}`}
-          <FavoriteButton isFavorite={isFavorite} />
+          <FavoriteButton
+            isFavorite={isFavorite}
+            onToggleFavorite={() => onToggleFavorite(slug)}
+          />
         </Caption>
       </CaptionContainer>
     </Card>

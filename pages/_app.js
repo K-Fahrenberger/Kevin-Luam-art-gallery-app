@@ -17,6 +17,7 @@ export default function App({ Component, pageProps }) {
     "art-pieces-info",
     { defaultValue: [] }
   );
+  console.log('artpiecesinfo ', artPiecesInfo);
 
   // toggle favorite button
   function handleToggleFavorite(slug) {

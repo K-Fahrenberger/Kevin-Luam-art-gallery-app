@@ -24,6 +24,7 @@ export default function ArtPieceDetailsPage({ pieces }) {
   return (
     <>
       <ArtPieceDetails
+        slug={slug}
         image={imageSource}
         width={dimensions.width}
         height={dimensions.height}

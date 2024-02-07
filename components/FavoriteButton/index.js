@@ -16,16 +16,16 @@ const StyledImage = styled(Image)`
   height: auto;
 `;
 
-export default function FavoriteButton() {
-  const [isFavorite, setIsFavorite] = useState(false);
-  const toggleFavorite = () => {
-    setIsFavorite(!isFavorite);
-  };
+export default function FavoriteButton({ isFavorite, onToggleFavorite }) {
+  // const [isFavorite, setIsFavorite] = useState(false);
+  // const toggleFavorite = () => {
+  //   setIsFavorite(!isFavorite);
+  // };
   return (
     <StyledButton
       className="favorite-button"
       aria-label="Save this art piece as favorite"
-      onClick={toggleFavorite}
+      onClick={onToggleFavorite}
     >
       {isFavorite ? (
         <StyledImage

@@ -19,7 +19,7 @@ const StyledItems = styled.li`
   justify-content: center;
 `;
 
-export default function ArtPieces({ pieces }) {
+export default function ArtPieces({ pieces, onToggleFavorite }) {
   return (
     <>
       <StyledList>
@@ -33,6 +33,7 @@ export default function ArtPieces({ pieces }) {
               title={piece.name}
               artist={piece.artist}
               isFavorite={piece.isFavorite}
+              onToggleFavorite={() => onToggleFavorite(piece.slug)}
             />
           </StyledItems>
         ))}

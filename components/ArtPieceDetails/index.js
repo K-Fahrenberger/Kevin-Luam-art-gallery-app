@@ -21,6 +21,7 @@ const DetailsCaption = styled.figcaption`
 `;
 
 export default function ArtPieceDetails({
+  slug,
   image,
   title,
   artist,
@@ -29,6 +30,7 @@ export default function ArtPieceDetails({
   width,
   height,
   isFavorite,
+  onToggleFavorite,
 }) {
   return (
     <DetailsContainer>
@@ -48,7 +50,7 @@ export default function ArtPieceDetails({
             {`Artist: ${artist}`} <br />
             {`Year: ${year}`} <br />
             {`Genre: ${genre}`}
-            <FavoriteButton isFavorite={isFavorite} />
+            <FavoriteButton isFavorite={isFavorite} onToggleFavorite={() => onToggleFavorite(slug)}/>
           </DetailsCaption>
         </CaptionContainer>
       </Card>

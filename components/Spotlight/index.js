@@ -27,6 +27,7 @@ export default function Spotlight({
   width,
   height,
   isFavorite,
+  onToggleFavorite,
 }) {
   return (
     <SpotlightContainer>
@@ -45,7 +46,10 @@ export default function Spotlight({
           <Caption>
             {`"${title}"`} <br />
             {`Artist: ${artist}`}
-            <FavoriteButton isFavorite={isFavorite} />
+            <FavoriteButton
+              isFavorite={isFavorite}
+              onToggleFavorite={() => onToggleFavorite(slug)}
+            />
           </Caption>
         </CaptionContainer>
       </Card>

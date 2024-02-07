@@ -1,7 +1,7 @@
 import Head from "next/head.js";
 import Spotlight from "../components/Spotlight/index.js";
 
-export default function SpotlightPage({ pieces }) {
+export default function SpotlightPage({ pieces, onToggleFavorite }) {
   const randomPiece = pieces[Math.floor(Math.random() * pieces.length)];
   return (
     <>
@@ -16,6 +16,7 @@ export default function SpotlightPage({ pieces }) {
           artist={randomPiece.artist}
           width={randomPiece.dimensions.width}
           height={randomPiece.dimensions.height}
+          onToggleFavorite={onToggleFavorite}
         />
       )}
     </>
