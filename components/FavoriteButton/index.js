@@ -1,12 +1,11 @@
 import { useState } from "react";
 import Image from "next/image";
 import styled from "styled-components";
+
 const StyledButton = styled.button`
-  position: relative;
-  ${
-    "" /* top: 0;
-  right: 0; */
-  }
+  position: absolute;
+  top: 0;
+  right: 0;
   background: none;
   border: none;
   cursor: pointer;
