@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled from "styled-components";
 import ArtPiecePreview from "../ArtPiecePreview/index.js";
 
@@ -24,14 +25,16 @@ export default function ArtPieces({ pieces }) {
       <StyledList>
         {pieces.map((piece) => (
           <StyledItems key={piece.slug}>
-            <ArtPiecePreview
-              image={piece.imageSource}
-              width={piece.dimensions.width}
-              height={piece.dimensions.height}
-              title={piece.name}
-              artist={piece.artist}
-              isFavorite={piece.isFavorite}
-            />
+            <Link href={`/art-pieces/${piece.slug}`}>
+              <ArtPiecePreview
+                image={piece.imageSource}
+                width={piece.dimensions.width}
+                height={piece.dimensions.height}
+                title={piece.name}
+                artist={piece.artist}
+                isFavorite={piece.isFavorite}
+              />
+            </Link>
           </StyledItems>
         ))}
       </StyledList>
