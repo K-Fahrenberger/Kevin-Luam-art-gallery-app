@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 import styled from "styled-components";
 
 const StyledNav = styled.nav`
@@ -27,8 +26,9 @@ const StyledItem = styled.li`
   }
 `;
 
+// const StyledLink = styled(Link)``;
+
 export default function Navigation() {
-  const router = useRouter();
   return (
     <StyledNav>
       <StyledList>
@@ -38,7 +38,9 @@ export default function Navigation() {
         <StyledItem>
           <Link href={"/"}>Spotlight</Link>
         </StyledItem>
-        {/* <StyledItem><Link>Favorites</Link></StyledItem> */}
+        {/* <StyledItem>
+          <Link href={"/favorites"}>Favorites</Link>
+        </StyledItem> */}
       </StyledList>
     </StyledNav>
   );

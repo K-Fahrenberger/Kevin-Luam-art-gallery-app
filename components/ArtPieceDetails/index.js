@@ -1,8 +1,7 @@
 import styled from "styled-components";
 import { Card, ImageContainer, StyledImage } from "../ArtPiecePreview/index.js";
+import BackButton from "../BackButton/index.js";
 import FavoriteButton from "../FavoriteButton/index.js";
-import React from "react"; // Add the missing import statement for React
-// import {styles} from "/styles"
 
 const DetailsContainer = styled.section`
   display: flex;
@@ -25,10 +24,11 @@ export default function ArtPieceDetails({
   genre,
   width,
   height,
-  isFavorite
+  isFavorite,
 }) {
   return (
     <DetailsContainer>
+      <BackButton />
       <Card>
         <ImageContainer>
           <StyledImage
@@ -39,7 +39,7 @@ export default function ArtPieceDetails({
           />
         </ImageContainer>
         <DetailsCaption>
-        <FavoriteButton isFavorite={isFavorite}/>
+          <FavoriteButton isFavorite={isFavorite} />
           {`"${title}"`} <br />
           {`Artist: ${artist}`} <br />
           {`Year: ${year}`} <br />
