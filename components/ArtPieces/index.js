@@ -25,16 +25,15 @@ export default function ArtPieces({ pieces }) {
       <StyledList>
         {pieces.map((piece) => (
           <StyledItems key={piece.slug}>
-            <Link href={`/art-pieces/${piece.slug}`}>
-              <ArtPiecePreview
-                image={piece.imageSource}
-                width={piece.dimensions.width}
-                height={piece.dimensions.height}
-                title={piece.name}
-                artist={piece.artist}
-                isFavorite={piece.isFavorite}
-              />
-            </Link>
+            <ArtPiecePreview
+              slug={piece.slug}
+              image={piece.imageSource}
+              width={piece.dimensions.width}
+              height={piece.dimensions.height}
+              title={piece.name}
+              artist={piece.artist}
+              isFavorite={piece.isFavorite}
+            />
           </StyledItems>
         ))}
       </StyledList>

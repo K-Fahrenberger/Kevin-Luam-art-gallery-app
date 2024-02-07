@@ -36,6 +36,7 @@ export const Caption = styled.figcaption`
 `;
 
 export default function ArtPiecePreview({
+  slug,
   image,
   width,
   height,
@@ -46,12 +47,14 @@ export default function ArtPiecePreview({
   return (
     <Card>
       <ImageContainer>
-        <StyledImage
-          src={image}
-          alt={`Art piece by ${artist}`}
-          width={width}
-          height={height}
-        />
+        <Link href={`/art-pieces/${slug}`}>
+          <StyledImage
+            src={image}
+            alt={`Art piece by ${artist}`}
+            width={width}
+            height={height}
+          />
+        </Link>
       </ImageContainer>
       <Caption>
         <FavoriteButton isFavorite={isFavorite} />
