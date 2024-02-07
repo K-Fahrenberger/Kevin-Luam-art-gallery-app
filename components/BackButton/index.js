@@ -4,8 +4,8 @@ import styled from "styled-components";
 
 const StyledButton = styled.button`
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 1vw;
+  left: 1vw;
   background: none;
   border: none;
   cursor: pointer;

@@ -1,6 +1,6 @@
-import styled from "styled-components";
 import Link from "next/link";
-import React, { useState, useEffect } from "react";
+import styled from "styled-components";
+// import React, { useState, useEffect } from "react";
 import {
   Card,
   ImageContainer,
@@ -15,7 +15,7 @@ const SpotlightContainer = styled.section`
   align-items: center;
 `;
 
-const CaptionContainer = styled.div`
+export const CaptionContainer = styled.div`
   position: relative;
 `;
 

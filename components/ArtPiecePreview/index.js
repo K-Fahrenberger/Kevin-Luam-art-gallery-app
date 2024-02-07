@@ -2,14 +2,25 @@ import styled from "styled-components";
 import Link from "next/link.js";
 import Image from "next/image";
 import FavoriteButton from "../FavoriteButton/index.js";
+import { CaptionContainer } from "../Spotlight/index.js";
 
 export const Card = styled.figure`
   display: table;
 `;
 
+export const Caption = styled.figcaption`
+  display: table-caption;
+  caption-side: bottom;
+  width: 100%;
+  margin: 3px auto;
+  padding: 8px 8px;
+  background-color: lightgray;
+  color: black;
+`;
+
 export const ImageContainer = styled.div`
-  position: relative;
   display: flex;
+  position: relative;
   justify-content: center;
   margin-top: 1rem;
   width: 100%;
@@ -23,16 +34,6 @@ export const StyledImage = styled(Image)`
     margin-top: 50px;
   }
   height: auto;
-`;
-
-export const Caption = styled.figcaption`
-  display: table-caption;
-  caption-side: bottom;
-  width: 100%;
-  margin: 3px auto;
-  padding: 3px 5px;
-  background-color: lightgray;
-  color: black;
 `;
 
 export default function ArtPiecePreview({
@@ -56,11 +57,13 @@ export default function ArtPiecePreview({
           />
         </Link>
       </ImageContainer>
-      <Caption>
-        <FavoriteButton isFavorite={isFavorite} />
-        {`"${title}"`} <br />
-        {`Artist: ${artist}`}
-      </Caption>
+      <CaptionContainer>
+        <Caption>
+          {`"${title}"`} <br />
+          {`Artist: ${artist}`}
+          <FavoriteButton isFavorite={isFavorite} />
+        </Caption>
+      </CaptionContainer>
     </Card>
   );
 }
