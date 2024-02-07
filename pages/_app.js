@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }) {
   const { data, isLoading, error } = useSWR(url, fetcher);
   console.log("data ", data);
 
-  // create global state
+  // get local storage
   const [artPiecesInfo, setArtPiecesInfo] = useLocalStorageState(
     "art-pieces-info",
     { defaultValue: [] }

@@ -31,7 +31,7 @@ export const StyledImage = styled(Image)`
   max-width: 70vw;
   margin-top: 5px;
   &:first-child {
-    margin-top: 50px;
+    margin-top: 16px;
   }
   height: auto;
 `;
@@ -64,7 +64,7 @@ export default function ArtPiecePreview({
           {`Artist: ${artist}`}
           <FavoriteButton
             isFavorite={isFavorite}
-            onToggleFavorite={() => onToggleFavorite(slug)}
+            onToggleFavorite={onToggleFavorite}
           />
         </Caption>
       </CaptionContainer>

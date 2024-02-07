@@ -16,7 +16,10 @@ export default function SpotlightPage({ pieces, onToggleFavorite }) {
           artist={randomPiece.artist}
           width={randomPiece.dimensions.width}
           height={randomPiece.dimensions.height}
-          onToggleFavorite={onToggleFavorite}
+          onToggleFavorite={(e) => {
+            e.preventDefault();
+            onToggleFavorite(randomPiece.slug);
+          }}
         />
       )}
     </>

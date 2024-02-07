@@ -48,7 +48,7 @@ export default function Spotlight({
             {`Artist: ${artist}`}
             <FavoriteButton
               isFavorite={isFavorite}
-              onToggleFavorite={() => onToggleFavorite(slug)}
+              onToggleFavorite={onToggleFavorite}
             />
           </Caption>
         </CaptionContainer>

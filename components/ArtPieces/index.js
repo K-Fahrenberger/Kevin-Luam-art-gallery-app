@@ -19,7 +19,7 @@ const StyledItems = styled.li`
   justify-content: center;
 `;
 
-export default function ArtPieces({ pieces, onToggleFavorite }) {
+export default function ArtPieces({ pieces, artPieceInfo, onToggleFavorite }) {
   return (
     <>
       <StyledList>
@@ -32,8 +32,14 @@ export default function ArtPieces({ pieces, onToggleFavorite }) {
               height={piece.dimensions.height}
               title={piece.name}
               artist={piece.artist}
-              isFavorite={piece.isFavorite}
-              onToggleFavorite={() => onToggleFavorite(piece.slug)}
+              isFavorite={
+                artPieceInfo.find((artPiece) => artPiece.slug === piece.slug)
+                  ?.isFavorite
+              }
+              onToggleFavorite={(e) => {
+                e.preventDefault();
+                onToggleFavorite(piece.slug);
+              }}
             />
           </StyledItems>
         ))}

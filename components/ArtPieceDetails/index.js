@@ -50,7 +50,7 @@ export default function ArtPieceDetails({
             {`Artist: ${artist}`} <br />
             {`Year: ${year}`} <br />
             {`Genre: ${genre}`}
-            <FavoriteButton isFavorite={isFavorite} onToggleFavorite={() => onToggleFavorite(slug)}/>
+            <FavoriteButton isFavorite={isFavorite} onToggleFavorite={onToggleFavorite}/>
           </DetailsCaption>
         </CaptionContainer>
       </Card>
