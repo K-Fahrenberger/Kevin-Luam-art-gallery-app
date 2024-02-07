@@ -14,7 +14,7 @@ const SpotlightContainer = styled.section`
   align-items: center;
 `;
 
-export default function Spotlight({ image, title, artist, width, height }) {
+export default function Spotlight({ image, title, artist, width, height, isFavorite }) {
   return (
     <SpotlightContainer>
       <Card>
@@ -27,7 +27,7 @@ export default function Spotlight({ image, title, artist, width, height }) {
           />
         </ImageContainer>
         <Caption>
-        <FavoriteButton />
+        <FavoriteButton isFavorite={isFavorite}/>
           {`"${title}"`} <br />
           {`Artist: ${artist}`}
         </Caption>
