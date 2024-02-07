@@ -10,6 +10,7 @@ export default function SpotlightPage({ pieces }) {
       </Head>
       {randomPiece && (
         <Spotlight
+          slug={randomPiece.slug}
           image={randomPiece.imageSource}
           title={randomPiece.name}
           artist={randomPiece.artist}

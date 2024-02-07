@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useRouter } from "next/router";
 import ArtPieceDetails from "@/components/ArtPieceDetails";
 
@@ -10,7 +9,8 @@ export default function ArtPieceDetailsPage({ pieces }) {
   // init relevant vars
   const index = pieces.findIndex((piece) => piece.slug === slug);
   const currentPiece = pieces[index];
-  const { image, width, height, title, artist, year, genre } = currentPiece;
+  console.log(currentPiece);
+  const { imageSource, dimensions, name, artist, year, genre } = currentPiece;
 
   // error msg for invalid slug
   if (!currentPiece) {
@@ -24,10 +24,10 @@ export default function ArtPieceDetailsPage({ pieces }) {
   return (
     <>
       <ArtPieceDetails
-        image={image}
-        width={width}
-        height={height}
-        title={title}
+        image={imageSource}
+        width={dimensions.width}
+        height={dimensions.height}
+        title={name}
         artist={artist}
         year={year}
         genre={genre}

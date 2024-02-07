@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import {
   Card,
@@ -14,23 +15,39 @@ const SpotlightContainer = styled.section`
   align-items: center;
 `;
 
-export default function Spotlight({ image, title, artist, width, height, isFavorite }) {
+const CaptionContainer = styled.div`
+  position: relative;
+`;
+
+export default function Spotlight({
+  slug,
+  image,
+  title,
+  artist,
+  width,
+  height,
+  isFavorite,
+}) {
   return (
     <SpotlightContainer>
       <Card>
         <ImageContainer>
-          <StyledImage
-            src={image}
-            alt={`Art piece by ${artist}`}
-            width={width}
-            height={height}
-          />
+          <Link href={`/art-pieces/${slug}`}>
+            <StyledImage
+              src={image}
+              alt={`Art piece by ${artist}`}
+              width={width}
+              height={height}
+            />
+          </Link>
         </ImageContainer>
-        <Caption>
-        <FavoriteButton isFavorite={isFavorite}/>
-          {`"${title}"`} <br />
-          {`Artist: ${artist}`}
-        </Caption>
+        <CaptionContainer>
+          <Caption>
+            {`"${title}"`} <br />
+            {`Artist: ${artist}`}
+            <FavoriteButton isFavorite={isFavorite} />
+          </Caption>
+        </CaptionContainer>
       </Card>
     </SpotlightContainer>
   );
